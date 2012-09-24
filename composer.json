@@ -1,0 +1,23 @@
+{
+	"name":"wookieb/datatables-datasource",
+	"description":"PHP library - source of server side data for datatables (http://datatables.net)",
+	"keywords":["datatables", "grid"],
+	"version":"0.1.0",
+	"authors":[
+		{
+			"name":"Łukasz Kużyński",
+			"email":"lukasz.kuzynski@gmail.com",
+			"homepage":"http://wookieb.pl"
+		}
+	],
+	"license":"MIT",
+	"require":{
+		"php":">=5.3",
+		"beberlei/assert":"1.x"
+	},
+	"autoload":{
+		"psr-0":{
+			"Wookieb":["src", "tests"]
+		}
+	}
+}

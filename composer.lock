@@ -1,0 +1,17 @@
+{
+    "hash": "562d153c034a5a2ba3746fca7aa5d555",
+    "packages": [
+        {
+            "package": "beberlei/assert",
+            "version": "v1.2"
+        }
+    ],
+    "packages-dev": null,
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": [
+
+    ]
+}
