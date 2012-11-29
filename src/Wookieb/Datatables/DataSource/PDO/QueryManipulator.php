@@ -43,7 +43,10 @@ class QueryManipulator
         }
 
         $find = array('[where]', '[:where]', '[where:]');
-        $replace = array($conditions ? 'WHERE '.$conditions : '', 'AND '.$conditions, $conditions.' AND');
+        $replace = array(
+            $conditions ? 'WHERE '.$conditions : '',
+            $conditions ? 'AND '.$conditions : '',
+            $conditions ? $conditions.' AND' : '');
         $this->modifiedQuery = str_ireplace($find, $replace, $this->modifiedQuery);
         return $this;
     }
@@ -74,7 +77,10 @@ class QueryManipulator
         }
 
         $find = array('[order_by]', '[:order_by]', '[order_by:]');
-        $replace = array($orderBy ? 'ORDER BY '.$orderBy : '', ','.$orderBy, $orderBy.',');
+        $replace = array(
+                $orderBy ? 'ORDER BY '.$orderBy : '',
+                $orderBy ? ','.$orderBy : '',
+                $orderBy ? $orderBy.',' : '');
         $this->modifiedQuery = str_ireplace($find, $replace, $this->modifiedQuery);
         return $this;
     }
